@@ -566,7 +566,7 @@ class Modmail(commands.Bot):
         if not categ:
             return await ctx.send('This server is not set up.')
         em = discord.Embed(title='Thread Closed')
-        em.description = f'{ctx.author.mention} has closed this modmail thread.'
+        em.description = f'{ctx.author.mention} ha cerrado este ticket.'
         em.color = discord.Color.red()
         for category, channels in ctx.guild.by_category():
             if category == categ:
@@ -594,7 +594,7 @@ class Modmail(commands.Bot):
         user_id = user_id or int(ctx.channel.topic.split(': ')[1])
         user = self.get_user(user_id)
         em = discord.Embed(title='Thread Closed')
-        em.description = f'{ctx.author.mention} has closed this modmail thread.'
+        em.description = f'{ctx.author.mention} ha cerrado este ticket.'
         em.color = discord.Color.red()
         if ctx.channel.category.name != 'Mod Mail Archives': # already closed.
             try:
