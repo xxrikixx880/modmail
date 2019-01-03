@@ -628,7 +628,7 @@ class Modmail(commands.Bot):
 
         user = self.get_user(user_id)
         em = discord.Embed(title='Thread Closed')
-        em.description = f'{ctx.author.mention} has closed this modmail thread.'
+        em.description = f'{ctx.author.mention} ha cerrado el ticket.'
         em.color = discord.Color.red()
 
         try:
@@ -667,7 +667,7 @@ class Modmail(commands.Bot):
         member = self.guild.get_member(user.id)
         avi = user.avatar_url
         time = datetime.datetime.utcnow()
-        desc = description or f'{user.mention} has started a thread.'
+        desc = description or f'{user.mention} ha abierto un ticket.'
         color = discord.Color.blurple()
 
         if member:
