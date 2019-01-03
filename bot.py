@@ -565,8 +565,8 @@ class Modmail(commands.Bot):
         archives = discord.utils.get(ctx.guild.categories, name='Mod Mail Archives')
         if not categ:
             return await ctx.send('This server is not set up.')
-        em = discord.Embed(title='Thread Closed')
-        em.description = f'{ctx.author.mention} ha cerrado este ticket.'
+        em = discord.Embed(title='Gracias por tu aportación.')
+        em.description = f'{ctx.author.mention} ha cerrado este ticket, sad'
         em.color = discord.Color.red()
         for category, channels in ctx.guild.by_category():
             if category == categ:
@@ -593,8 +593,8 @@ class Modmail(commands.Bot):
 
         user_id = user_id or int(ctx.channel.topic.split(': ')[1])
         user = self.get_user(user_id)
-        em = discord.Embed(title='Thread Closed')
-        em.description = f'{ctx.author.mention} ha cerrado este ticket.'
+        em = discord.Embed(title='Gracias por tu aportación.')
+        em.description = f'{ctx.author.mention} ha cerrado este ticket, sad'
         em.color = discord.Color.red()
         if ctx.channel.category.name != 'Mod Mail Archives': # already closed.
             try:
@@ -627,8 +627,8 @@ class Modmail(commands.Bot):
             return await ctx.send('This channel is already archived.')
 
         user = self.get_user(user_id)
-        em = discord.Embed(title='Thread Closed')
-        em.description = f'{ctx.author.mention} ha cerrado el ticket.'
+        em = discord.Embed(title='Gracias por tu aportación.')
+        em.description = f'{ctx.author.mention} ha cerrado el ticket, sad'
         em.color = discord.Color.red()
 
         try:
@@ -806,15 +806,15 @@ class Modmail(commands.Bot):
         categ = discord.utils.get(guild.categories, name='Mod Mail')
         archives = discord.utils.get(guild.categories, name='Mod Mail Archives')
 
-        em = discord.Embed(title='Thanks for the message!')
-        em.description = 'The moderation team will get back to you as soon as possible!'
+        em = discord.Embed(title='Pero buenooooooooooo!')
+        em.description = 'Responderé a tu mensaje lo antes posible, gracias.'
         em.color = discord.Color.green()
         
         info_description = None
 
         if creator:
             em = discord.Embed(title='Thread Started')
-            second = 'has started a modmail thread with you.' if not reopen else 'has reopened this modmail thread.'
+            second = 'has started a modmail thread with you.' if not reopen else 'ha reabierto este ticket.'
             em.description = f'{creator.mention} ' + second
 
             em.color = discord.Color.green()
@@ -939,7 +939,7 @@ class Modmail(commands.Bot):
         if message == 'clear':
             return await self.change_presence(activity=None)
         await self.change_presence(activity=discord.Game(message))
-        em = discord.Embed(title='Status Changed')
+        em = discord.Embed(title='Estado cambiado')
         em.description = message
         em.color = discord.Color.green()
         em.set_footer(text='Note: this change is temporary.')
@@ -1005,12 +1005,12 @@ class Modmail(commands.Bot):
             await top_chan.edit(topic=topic)
 
             em.title = 'Success'
-            em.description = f'{mention} is now blocked'
+            em.description = f'{mention} ha sido bloqueado'
 
             await ctx.send(embed=em)
         else:
             em.title = 'Error'
-            em.description = f'{mention} is already blocked'
+            em.description = f'{mention} ya está bloqueado'
             em.color = discord.Color.red()
 
             await ctx.send(embed=em)
