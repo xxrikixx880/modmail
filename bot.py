@@ -784,7 +784,7 @@ class Modmail(commands.Bot):
         top_chan = categ.channels[0] #bot-info
         blocked = top_chan.topic.split('Blocked\n-------')[1].strip().split('\n')
         blocked = [x.strip() for x in blocked]
-        reaction = '🚫' if str(message.author.id) in blocked else '✂'
+        reaction = '🚫' if str(message.author.id) in blocked else '✅'
 
         try:
             await message.add_reaction(reaction)
