@@ -224,7 +224,7 @@ class Modmail(commands.Bot):
         return overwrites
 
     def help_embed(self, prefix):
-        em = discord.Embed(color=0xffae0b)
+        em = discord.Embed(color=0xffa500)
         em.set_author(name='Mod Mail - Help', icon_url=self.user.avatar_url)
         em.description = 'Here is a list of commands for the bot.'
 
