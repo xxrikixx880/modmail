@@ -806,8 +806,8 @@ class Modmail(commands.Bot):
         categ = discord.utils.get(guild.categories, name='Mod Mail')
         archives = discord.utils.get(guild.categories, name='Mod Mail Archives')
 
-        em = discord.Embed(title='Pero buenooooooooooo!')
-        em.description = 'Responderé a tu mensaje lo antes posible, gracias.'
+        em = discord.Embed(title='Ticket Abierto')
+        em.description = 'El equipo de soporte te responderá lo antes posible.'
         em.color = discord.Color.green()
         
         info_description = None
