@@ -822,7 +822,7 @@ class Modmail(commands.Bot):
             info_description = f'{creator.mention} has {"created" if not reopen else "reopened"} a thread with {user.mention}'
 
 
-        mention = (self.config.get('MENTION') or '@here') if not creator else None
+        mention = (self.config.get('MENTION') or '<@&538175265596244009>') if not creator else None
 
 
         if channel is not None:
