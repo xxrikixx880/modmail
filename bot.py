@@ -627,8 +627,8 @@ class Modmail(commands.Bot):
             return await ctx.send('This channel is already archived.')
 
         user = self.get_user(user_id)
-        em = discord.Embed(title='Gracias por tu aportación.')
-        em.description = f'{ctx.author.mention} ha cerrado el ticket.No respondas a menos que necesites abrir otro ticket de soporte por favor'
+        em = discord.Embed(title='Ticket Cerrado.')
+        em.description = f'{ctx.author.mention} ha cerrado el ticket.No respondas a menos que necesites abrir otro ticket de soporte por favor.'
         em.color = discord.Color.red()
 
         try:
