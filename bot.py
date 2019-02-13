@@ -628,7 +628,7 @@ class Modmail(commands.Bot):
 
         user = self.get_user(user_id)
         em = discord.Embed(title='Ticket Cerrado.')
-        em.description = f'{ctx.author.mention} ha cerrado el ticket.No respondas a menos que necesites abrir otro ticket de soporte por favor.'
+        em.description = f'{ctx.author.mention}No respondas a menos que necesites abrir otro ticket de soporte por favor.'
         em.color = discord.Color.red()
 
         try:
